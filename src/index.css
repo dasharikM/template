@@ -1,0 +1,245 @@
+body {
+    background: rgb(54,49,49);
+    background: linear-gradient(0deg, rgba(54,49,49,1) 0%, rgba(49,50,54,1) 100%);
+
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+.container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    margin: 1em;
+    margin-bottom: 3em;
+    width: 85%;
+}
+.container-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.container-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box; /*учёт padding и  box*/
+
+    position: sticky; 
+    top: 0; /* Расстояние от верха, где прилипнет */
+    background: rgba(54, 49, 49, 0.7); /* Фон с прозрачностью */
+}
+.search-input{
+    padding: 10px 20px 10px;
+    margin: 10px 0 10px;
+    border-radius: 8px;
+    width: 20%;
+    background: transparent;
+    outline: none;
+    border: solid 0.2px rgb(174, 178, 186);
+    color: rgb(200, 206, 218);
+    font-size: medium;
+
+}
+.search-button{
+    margin: 10px 20px 10px;
+    border-radius: 8px;
+    background: rgb(174, 178, 186);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+.flex-covers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 1em;
+}
+.container-cover{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    align-items: start;
+    padding: 1em;
+    justify-content: end;
+}
+.cover-author{
+    color: rgb(246, 240, 229);
+    font-size:5em;
+}
+.cover-tags{
+    padding: 0;
+    margin-bottom: 0.1;
+}
+.cover-tag{
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.7em;
+    border-radius: 5%;
+    border: solid 0.2px rgb(207, 211, 220);
+    text-transform: uppercase;
+    color: rgb(242, 245, 253);
+}
+.cover-text{
+    font-size: 0.9rem;
+    color: rgb(207, 211, 220);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cover-music-container{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: start;
+    column-gap: 1em;
+}
+.cover-music{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    width: 100%;
+}
+.cover-music-image{
+    width: 80px;
+    height: 80px;
+}
+.cover-music-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.cover-music-info-theme{
+    text-transform: uppercase; 
+    color: rgb(174, 178, 186);
+    font-size: 0.9rem;
+}
+.cover-music-info-name{
+    font-weight: 750;
+    font-size: 0.9rem;
+    color: rgb(207, 211, 220);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cover-music-info-details{
+    font-size: 0.7rem;
+    letter-spacing:0.08rem;
+    color: rgb(207, 211, 220);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.grid-hot-artists{
+    display: grid;
+    grid-template-columns:  repeat(6, minmax(150px, 1fr));
+    column-gap: 0.5em;
+    row-gap: 1em;
+    justify-items:center;
+    margin-bottom: 30px;
+}
+@media (max-width: 1100px) {
+    .grid-hot-artists {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+.container-artist{
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+}
+
+.artist-image{
+    align-self: center;
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    border: 3px inset white;
+    margin-bottom: 0.5em;
+}
+
+.artist-name{
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: rgb(253, 241, 219);
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+.section-name{
+    color: #FF8AB3;
+    align-self: start;
+    font-size:4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.grid-hot-tracks{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2em;
+}
+
+.grid-track{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
+    column-gap: 1em;
+}
+
+.track-img {
+    grid-column: 1 / 2; 
+    width: 70px; 
+    border-radius: 5%;
+    border: 3px inset white;
+}
+
+.track-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 0;
+}
+
+.track-name{
+    font-weight: bold;
+    color: rgb(246, 240, 229);
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    font-size: 0.8rem;
+}
+
+.track-author{
+    font-size: 0.9rem;
+    color: rgb(253, 241, 219);
+    margin-bottom:1em;
+}
+
+.track-tags{
+    text-transform: lowercase;
+    color: grey;
+    font-size: 0.7rem;
+    letter-spacing:0.08rem;
+    flex-wrap: wrap;
+}
+
+.track-name, .track-author, .artist-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
